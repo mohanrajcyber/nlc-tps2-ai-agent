@@ -18,11 +18,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install & Build
+      - name: Install & Build (GitHub Pages)
         run: |
           cd frontend
           npm install
-          npm run build
+          VITE_BASE=/nlc-tps2-ai-agent/ npx vite build --base=/nlc-tps2-ai-agent/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
