@@ -1,7 +1,7 @@
 // NLC TPS-II AI Agent — React Frontend (Full Version)
 import { useState, useEffect, useRef } from "react";
 
-const API = "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 const INITIAL_UNITS = [
   { id: 1, status: "RUNNING",  gen: 185, eff: 85, steamTemp: 532, faults: [{ type: "warn", label: "1 Warn" }] },
